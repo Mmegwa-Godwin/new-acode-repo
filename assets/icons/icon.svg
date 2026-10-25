@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="100" fill="#241610"/>
+  <rect x="20" y="20" width="472" height="472" rx="82" fill="none" stroke="#c49a45" stroke-width="7"/>
+  <path d="M256 65 L291 137 L363 102 L328 174 L400 209 L328 244 L363 316 L291 281 L256 353 L221 281 L149 316 L184 244 L112 209 L184 174 L149 102 L221 137 Z" fill="#8d3027" stroke="#e6c16e" stroke-width="5"/>
+  <circle cx="256" cy="209" r="83" fill="#f6eedc" stroke="#c49a45" stroke-width="8"/>
+  <circle cx="256" cy="209" r="70" fill="none" stroke="#8d3027" stroke-width="2" stroke-dasharray="5 7"/>
+  <text x="256" y="226" font-family="serif" font-size="49" font-weight="bold" text-anchor="middle" fill="#241610">ỤBỌ</text>
+  <path d="M135 385 H377" stroke="#c49a45" stroke-width="3"/>
+  <text x="256" y="425" font-family="serif" font-size="39" font-weight="bold" text-anchor="middle" fill="#e6c16e">ỤBỌCHỊ</text>
+  <circle cx="115" cy="385" r="6" fill="#8d3027" stroke="#e6c16e" stroke-width="2"/>
+  <circle cx="397" cy="385" r="6" fill="#8d3027" stroke="#e6c16e" stroke-width="2"/>
+</svg>

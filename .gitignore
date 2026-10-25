@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.before-*
+*.backup
+*.bak
+*.tmp
+.DS_Store
+
+*-backup

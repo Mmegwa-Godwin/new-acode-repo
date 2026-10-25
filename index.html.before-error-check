@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#241610">
+<title>Ụbọchị | Igbo Heritage</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="symbol">✳</div>
+  <div>
+    <h2>ỤBỌCHỊ</h2>
+    <p>IGBO TIME • OUR HERITAGE</p>
+  </div>
+</header>
+
+<main>
+  <section class="welcome">
+    <p class="eyebrow">ỤBỌCHỊ • IMO STATE</p>
+    <h1>Our roots.<br>Our rhythm.<br><span>Our story.</span></h1>
+    <p>Discover the wisdom, calendar and living traditions of the Igbo people.</p>
+  </section>
+
+  <section class="market-panel">
+    <p class="eyebrow">THE IGBO MARKET CYCLE</p>
+    <h2 id="today">Loading date...</h2>
+    <div class="market-days">
+      <div><span>01</span><strong>EKE</strong></div>
+      <div><span>02</span><strong>ORIE</strong></div>
+      <div><span>03</span><strong>AFỌ</strong></div>
+      <div><span>04</span><strong>NKỌ</strong></div>
+    </div>
+    <p>Four days. One enduring tradition.</p>
+    <h3>Today's market day: <span id="market">Loading...</span></h3>
+  </section>
+
+  <section class="explore">
+    <p class="eyebrow">EXPLORE OUR HERITAGE</p>
+    <button onclick="showPage('converter')">📅 &nbsp; Igbo Date Converter</button>
+    <button onclick="showPage('culture')">🌿 &nbsp; Traditions & Culture</button>
+    <button onclick="showPage('festivals')">🎉 &nbsp; Festivals & Communities</button>
+      <button type="button" onclick="showPage('communities')">🏘️ &nbsp; Community Directory</button>
+  </section>
+
+  <section id="converter" class="card hidden">
+    <h2>Igbo Date Converter</h2>
+    <p>Choose a Gregorian date to check its calculated market day.</p>
+    <div class="calendar-heading">
+      <button type="button" class="month-arrow" onclick="changeMonth(-1)" aria-label="Previous month">‹</button>
+      <h3 id="calendar-month">Loading month...</h3>
+      <button type="button" class="month-arrow" onclick="changeMonth(1)" aria-label="Next month">›</button>
+    </div>
+    <div class="calendar-weekdays">
+      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+      <span>Thu</span><span>Fri</span><span>Sat</span>
+    </div>
+    <div id="calendar-grid" class="calendar-grid" aria-label="Monthly calendar"></div>
+    <p class="calendar-legend">● Special observance &nbsp; · Tap a date for its details.</p>
+
+    <input type="date" id="chosenDate">
+    <button onclick="convertDate()">Check Date</button>
+    <p id="result"></p>
+  </section>
+
+  <section id="festivals" class="card hidden">
+    <p class="eyebrow">OUR COMMUNITIES • OUR HERITAGE</p>
+    <h2>Festivals & Cultural Events</h2>
+    <p>Explore festivals and traditions from communities across Imo State. Some dates and descriptions still need confirmation from local cultural custodians.</p>
+    <label for="festival-search">Search by festival or community</label>
+    <input type="search" id="festival-search" placeholder="Try Mbaise or Awaka">
+    <div id="festival-list" class="festival-list" aria-live="polite"></div>
+  </section>
+
+  <section id="culture" class="card hidden">
+    <h2>Our Living Heritage</h2>
+    <p>Eke, Orie, Afọ and Nkwọ form the familiar four-day market cycle in many Igbo communities.</p>
+    <p>Traditions can vary between communities. We will document Owerri's customs carefully as the app grows.</p>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+      <button onclick="showHome()">⌂<span>Home</span></button>
+      <button onclick="showPage('converter')">▦<span>Calendar</span></button>
+      <button onclick="showPage('culture')">◇<span>Culture</span></button>
+    </nav>
+
+    <footer>
+  <p>EMUME ỤBỌCHỊ</p>
+  <p>Preserving our heritage for generations.</p>
+  <p class="author-credit">Created with pride by Chuksman &copy; 2026</p>
+</footer>
+
+<script src="js/calendar.js"></script>
+<script src="js/data/observances.js"></script>
+<script src="js/data/festivals.js"></script>
+
+<section id="communities" class="card hidden">
+  <h2>🏘️ Igbo Community Directory</h2>
+  <p>Explore communities, their states, and cultural heritage. Records marked as starter entries still need local verification.</p>
+  <label for="community-search">Search communities</label>
+  <input id="community-search" type="search" placeholder="Search by community or state..." autocomplete="off">
+  <div id="community-list" class="community-list"></div>
+
+  <div id="community-profile" class="community-profile hidden" aria-live="polite"></div>
+
+</section>
+
+<script src="js/data/communities.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
