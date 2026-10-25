@@ -3,7 +3,19 @@ function showPage(page) {
     .forEach(section => section.classList.add('hidden'));
 
   const target = document.getElementById(page);
-  if (target) target.classList.remove('hidden');
+  if (target) {
+    target.classList.remove('hidden');
+
+    let backButton = target.querySelector(':scope > .section-back-button');
+    if (!backButton) {
+      backButton = document.createElement('button');
+      backButton.type = 'button';
+      backButton.className = 'section-back-button';
+      backButton.textContent = '← Back to Home';
+      backButton.addEventListener('click', showHome);
+      target.prepend(backButton);
+    }
+  }
 
   if (page === 'converter') renderCalendarGrid();
   if (page === 'festivals') renderFestivals(festivalSearch ? festivalSearch.value : '');
