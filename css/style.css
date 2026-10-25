@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --earth: #241610;
+  --red: #8d3027;
+  --gold: #c49a45;
+  --cream: #f6eedc;
+  --paper: #fffaf0;
+  --text: #30251d;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Georgia, serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: var(--earth);
+  color: var(--cream);
+  border-bottom: 4px solid var(--gold);
+}
+
+.symbol {
+  font-size: 36px;
+  color: var(--gold);
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.topbar p {
+  margin: 6px 0 0;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #e5c98b;
+}
+
+main {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+}
+
+.welcome {
+  padding: 24px 0 30px;
+  border-bottom: 1px solid #d8c5a0;
+}
+
+.eyebrow {
+  color: var(--red);
+  font: bold 11px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.welcome h1 {
+  margin: 20px 0;
+  font-size: clamp(38px, 10vw, 56px);
+  line-height: 1.12;
+}
+
+.welcome h1 span {
+  color: var(--red);
+  font-style: italic;
+}
+
+.welcome > p:last-child {
+  line-height: 1.7;
+}
+
+.market-panel {
+  margin: 26px 0;
+  padding: 22px 16px;
+  background: var(--earth);
+  color: var(--cream);
+  border: 2px solid var(--gold);
+  outline: 1px solid var(--earth);
+  outline-offset: 4px;
+}
+
+.market-panel .eyebrow {
+  color: #e6c16e;
+}
+
+.market-panel h2 {
+  font-size: 21px;
+}
+
+.market-days {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  margin: 24px 0;
+}
+
+.market-days div {
+  padding: 14px 2px;
+  text-align: center;
+  background: var(--red);
+  border-bottom: 3px solid var(--gold);
+}
+
+.market-days span,
+.market-days strong {
+  display: block;
+}
+
+.market-days span {
+  margin-bottom: 8px;
+  color: #f0d69e;
+  font: 10px Arial, sans-serif;
+}
+
+.market-days strong {
+  font-size: 12px;
+}
+
+.market-panel > p:last-of-type {
+  color: #e8d5b0;
+  font-style: italic;
+}
+
+.market-panel h3 {
+  font-size: 15px;
+}
+
+.market-panel h3 span {
+  color: #e9c46a;
+}
+
+.explore {
+  margin: 35px 0;
+}
+
+button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 16px;
+  background: var(--red);
+  color: white;
+  border: 1px solid var(--gold);
+  font: bold 14px Arial, sans-serif;
+  text-align: left;
+}
+
+button:active {
+  background: var(--earth);
+}
+
+.card {
+  padding: 20px;
+  margin: 22px 0;
+  background: var(--paper);
+  border: 1px solid #d8c5a0;
+  border-top: 4px solid var(--red);
+}
+
+.card p {
+  line-height: 1.7;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #bda77e;
+  background: white;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  padding: 25px 15px;
+  background: var(--earth);
+  color: var(--cream);
+  text-align: center;
+  font-size: 12px;
+}
+
+footer p:first-child {
+  color: #e6c16e;
+  letter-spacing: 3px;
+}
+
+/* Traditional-inspired decorative details */
+.welcome {
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome::after {
+  content: "◇ ◆ ◇ ◆ ◇";
+  display: block;
+  margin-top: 24px;
+  padding: 12px 4px;
+  color: var(--red);
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  text-align: center;
+  letter-spacing: 8px;
+  font-size: 20px;
+}
+
+.market-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.market-panel::before {
+  content: "✳  ◇  ✳  ◇  ✳";
+  display: block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 6px;
+}
+
+.market-days div {
+  position: relative;
+  overflow: hidden;
+}
+
+.market-days div::after {
+  content: "◇";
+  display: block;
+  margin-top: 8px;
+  color: #e6c16e;
+  font-size: 12px;
+}
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  padding: 8px;
+  background: var(--earth);
+  border-top: 3px solid var(--gold);
+}
+
+.bottom-nav button {
+  flex: 1;
+  margin: 0;
+  padding: 10px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--cream);
+  text-align: center;
+  font-size: 22px;
+}
+
+.bottom-nav button span {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+/* Ubochi creator credit */
+.author-credit {
+  margin-top: 14px;
+  padding: 10px 8px;
+  border-top: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+
+/* Monthly Ubochi calendar */
+.calendar-heading {
+  display: grid;
+  grid-template-columns: 46px 1fr 46px;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 16px;
+}
+
+.calendar-heading h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+button.month-arrow {
+  width: 46px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 27px;
+  background: var(--earth);
+  color: var(--gold);
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.calendar-weekdays {
+  margin-bottom: 6px;
+  text-align: center;
+  font: bold 11px Arial, sans-serif;
+  color: var(--red);
+}
+
+.calendar-weekdays span {
+  padding: 8px 0;
+}
+
+.calendar-day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 65px;
+  margin: 0;
+  padding: 6px 1px;
+  text-align: center;
+  background: #fffaf0;
+  color: var(--text);
+  border: 1px solid #e0d0b3;
+  font-family: Arial, sans-serif;
+}
+
+.calendar-day .day-number {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.calendar-day .day-market {
+  font-size: 10px;
+  color: var(--red);
+}
+
+.calendar-day.is-today {
+  border: 2px solid var(--red);
+  background: #f0dfb8;
+}
+
+.calendar-day.has-observance {
+  border-bottom: 3px solid var(--gold);
+}
+
+.calendar-day .observance-dot {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 8px;
+  color: var(--red);
+}
+
+.calendar-empty {
+  min-height: 65px;
+}
+
+.calendar-legend {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #65503b;
+}
+
+@media (max-width: 380px) {
+  .calendar-weekdays,
+  .calendar-grid {
+    gap: 2px;
+  }
+
+  .calendar-day {
+    min-height: 58px;
+    font-size: 12px;
+  }
+
+  .calendar-day .day-market {
+    font-size: 9px;
+  }
+}
+
+
+/* Festivals and community archive */
+.festival-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.festival-card {
+  padding: 16px;
+  background: #fffdf7;
+  border: 1px solid #d8c5a0;
+  border-left: 4px solid var(--gold);
+}
+
+.festival-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--red);
+  font-size: 20px;
+}
+
+.festival-card p {
+  line-height: 1.6;
+}
+
+.festival-community {
+  font-weight: bold;
+}
+
+.festival-status {
+  color: #70542e;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.festival-card details {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e0d0b3;
+}
+
+.festival-card summary {
+  color: var(--red);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.festival-card li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+
+/* Igbo community directory */
+.community-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.community-card {
+  padding: 16px;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  background: var(--paper);
+}
+.community-card h3 {
+  margin-top: 0;
+  color: var(--red);
+}
+.community-location {
+  font-weight: 700;
+}
+.community-card small {
+  display: block;
+  margin-top: 12px;
+  color: var(--red);
+}
+#community-search {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+}
+
+
+/* Community profile cards and details */
+.community-open-button,
+.community-back-button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--red);
+  color: var(--paper);
+  font: inherit;
+  cursor: pointer;
+}
+.community-profile {
+  margin-top: 22px;
+  padding: 18px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  background: var(--paper);
+}
+.community-profile h2,
+.community-profile h3 {
+  color: var(--red);
+}
+.community-verification {
+  padding: 10px;
+  border-left: 4px solid var(--gold);
+  background: var(--cream);
+}
+
+
+/* Confirmed community festival markers */
+.calendar-day.has-festival {
+  outline: 2px solid var(--gold);
+  outline-offset: -3px;
+}
+.festival-day-marker {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--red);
+}
+.calendar-festival-title {
+  font-weight: 700;
+  color: var(--red);
+}
